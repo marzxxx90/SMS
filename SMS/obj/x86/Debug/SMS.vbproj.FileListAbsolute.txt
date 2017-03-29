@@ -1,0 +1,9 @@
+C:\Users\MISJunmar\Documents\GitHub\SMS\SMS\bin\Debug\SMS.exe
+C:\Users\MISJunmar\Documents\GitHub\SMS\SMS\bin\Debug\SMS.pdb
+C:\Users\MISJunmar\Documents\GitHub\SMS\SMS\bin\Debug\SMS.xml
+C:\Users\MISJunmar\Documents\GitHub\SMS\SMS\obj\x86\Debug\SMS.frmMain.resources
+C:\Users\MISJunmar\Documents\GitHub\SMS\SMS\obj\x86\Debug\SMS.Resources.resources
+C:\Users\MISJunmar\Documents\GitHub\SMS\SMS\obj\x86\Debug\SMS.vbproj.GenerateResource.Cache
+C:\Users\MISJunmar\Documents\GitHub\SMS\SMS\obj\x86\Debug\SMS.exe
+C:\Users\MISJunmar\Documents\GitHub\SMS\SMS\obj\x86\Debug\SMS.xml
+C:\Users\MISJunmar\Documents\GitHub\SMS\SMS\obj\x86\Debug\SMS.pdb
