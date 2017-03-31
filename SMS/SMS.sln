@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SMS", "SMS\SMS.vbproj", "{0FABA6EA-6919-4839-8A73-ABFDD818D44C}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SMS", "SMS\SMS.vbproj", "{0DD71636-EE46-4F69-B6C3-1137CBD7839D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0FABA6EA-6919-4839-8A73-ABFDD818D44C}.Debug|x86.ActiveCfg = Debug|x86
-		{0FABA6EA-6919-4839-8A73-ABFDD818D44C}.Debug|x86.Build.0 = Debug|x86
-		{0FABA6EA-6919-4839-8A73-ABFDD818D44C}.Release|x86.ActiveCfg = Release|x86
-		{0FABA6EA-6919-4839-8A73-ABFDD818D44C}.Release|x86.Build.0 = Release|x86
+		{0DD71636-EE46-4F69-B6C3-1137CBD7839D}.Debug|x86.ActiveCfg = Debug|x86
+		{0DD71636-EE46-4F69-B6C3-1137CBD7839D}.Debug|x86.Build.0 = Debug|x86
+		{0DD71636-EE46-4F69-B6C3-1137CBD7839D}.Release|x86.ActiveCfg = Release|x86
+		{0DD71636-EE46-4F69-B6C3-1137CBD7839D}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
