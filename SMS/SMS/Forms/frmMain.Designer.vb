@@ -64,7 +64,7 @@ Partial Class frmMain
         'ColumnHeader3
         '
         Me.ColumnHeader3.Text = "Message"
-        Me.ColumnHeader3.Width = 544
+        Me.ColumnHeader3.Width = 549
         '
         'frmMain
         '
