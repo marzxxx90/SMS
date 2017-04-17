@@ -7,9 +7,8 @@ Public Class frmMain
     Private strParse As String, strTrim As String
     Private mc As System.Text.RegularExpressions.MatchCollection
 
-    Private Function Parser(ByVal StrText As String) As ArrayList
+    Private Function Parser(ByVal StrText As String) As Hashtable
         Dim regx As New System.Text.RegularExpressions.Regex(pattern)
-        Dim strArray As New ArrayList
         If Regex.IsMatch(StrText, pattern) Then
             mc = regx.Matches(StrText) 'Check kong pila ang bracket
             For index As Integer = 0 To mc.Count - 1 ' Count sa Bracket
@@ -21,11 +20,9 @@ Public Class frmMain
                 strTrim = mc(index).Value.Substring(mc(index).Value.IndexOf(":") + 1).Trim({"]"c}).Trim({" "c})
                 Console.WriteLine("Value " & strTrim)
 
-                If Not isValidKey(strParse) Then Exit Function
+                If Not isValidKey(strParse) Then Exit For
 
-                'SMSHash.Add(strParse, strTrim)
-                strArray.Add(strParse)
-                strArray.Add(strTrim)
+                SMSHash.Add(strParse, strTrim)
             Next
         End If
 
@@ -46,7 +43,7 @@ Public Class frmMain
 
         'MsgBox("Success")
         'SMSHash.Clear()
-        Return strArray
+        Return SMSHash
     End Function
 
 
@@ -60,5 +57,8 @@ Public Class frmMain
 
     Private Sub btnOk_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOk.Click
         Parser(txtParse.Text)
+        For Each DE As DictionaryEntry In SMSHash
+            Console.WriteLine("Key " & DE.Key & " Value " & DE.Value)
+        Next
     End Sub
 End Class
