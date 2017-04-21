@@ -22,99 +22,126 @@ Partial Class frmMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
-        Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"2/30/2017", "09123456789", "Hello"}, -1)
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.lvSMS = New System.Windows.Forms.ListView()
-        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.btnOk = New System.Windows.Forms.Button()
-        Me.txtParse = New System.Windows.Forms.TextBox()
-        Me.GroupBox1.SuspendLayout()
+        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.btnTextPromo = New System.Windows.Forms.Button()
+        Me.btnTextMessage = New System.Windows.Forms.Button()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LoginToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SplitContainer1.Panel1.SuspendLayout()
+        Me.SplitContainer1.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'GroupBox1
+        'SplitContainer1
         '
-        Me.GroupBox1.Controls.Add(Me.txtParse)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(779, 128)
-        Me.GroupBox1.TabIndex = 0
-        Me.GroupBox1.TabStop = False
+        Me.SplitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SplitContainer1.Location = New System.Drawing.Point(0, 24)
+        Me.SplitContainer1.Name = "SplitContainer1"
         '
-        'lvSMS
+        'SplitContainer1.Panel1
         '
-        Me.lvSMS.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3})
-        Me.lvSMS.FullRowSelect = True
-        Me.lvSMS.GridLines = True
-        Me.lvSMS.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1})
-        Me.lvSMS.Location = New System.Drawing.Point(12, 146)
-        Me.lvSMS.Name = "lvSMS"
-        Me.lvSMS.Size = New System.Drawing.Size(779, 222)
-        Me.lvSMS.TabIndex = 1
-        Me.lvSMS.UseCompatibleStateImageBehavior = False
-        Me.lvSMS.View = System.Windows.Forms.View.Details
+        Me.SplitContainer1.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.SplitContainer1.Panel1.Controls.Add(Me.btnTextPromo)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.btnTextMessage)
         '
-        'ColumnHeader1
+        'SplitContainer1.Panel2
         '
-        Me.ColumnHeader1.Text = "Date"
-        Me.ColumnHeader1.Width = 94
+        Me.SplitContainer1.Panel2.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.SplitContainer1.Panel2.Margin = New System.Windows.Forms.Padding(1)
+        Me.SplitContainer1.Size = New System.Drawing.Size(1305, 582)
+        Me.SplitContainer1.SplitterDistance = 229
+        Me.SplitContainer1.TabIndex = 0
         '
-        'ColumnHeader2
+        'btnTextPromo
         '
-        Me.ColumnHeader2.Text = "Cell Number"
-        Me.ColumnHeader2.Width = 132
+        Me.btnTextPromo.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.btnTextPromo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnTextPromo.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTextPromo.Location = New System.Drawing.Point(14, 94)
+        Me.btnTextPromo.Name = "btnTextPromo"
+        Me.btnTextPromo.Size = New System.Drawing.Size(212, 78)
+        Me.btnTextPromo.TabIndex = 1
+        Me.btnTextPromo.Text = "Text Promo"
+        Me.btnTextPromo.UseVisualStyleBackColor = False
         '
-        'ColumnHeader3
+        'btnTextMessage
         '
-        Me.ColumnHeader3.Text = "Message"
-        Me.ColumnHeader3.Width = 549
+        Me.btnTextMessage.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.btnTextMessage.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnTextMessage.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTextMessage.Location = New System.Drawing.Point(14, 10)
+        Me.btnTextMessage.Name = "btnTextMessage"
+        Me.btnTextMessage.Size = New System.Drawing.Size(212, 78)
+        Me.btnTextMessage.TabIndex = 0
+        Me.btnTextMessage.Text = "Text Messages"
+        Me.btnTextMessage.UseVisualStyleBackColor = False
         '
-        'Timer1
+        'MenuStrip1
         '
-        Me.Timer1.Enabled = True
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ReportsToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(1305, 24)
+        Me.MenuStrip1.TabIndex = 1
+        Me.MenuStrip1.Text = "MenuStrip1"
         '
-        'btnOk
+        'FileToolStripMenuItem
         '
-        Me.btnOk.Location = New System.Drawing.Point(811, 22)
-        Me.btnOk.Name = "btnOk"
-        Me.btnOk.Size = New System.Drawing.Size(75, 23)
-        Me.btnOk.TabIndex = 2
-        Me.btnOk.Text = "OK"
-        Me.btnOk.UseVisualStyleBackColor = True
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitToolStripMenuItem, Me.LoginToolStripMenuItem})
+        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.FileToolStripMenuItem.Text = "&File"
         '
-        'txtParse
+        'ExitToolStripMenuItem
         '
-        Me.txtParse.Location = New System.Drawing.Point(6, 12)
-        Me.txtParse.Multiline = True
-        Me.txtParse.Name = "txtParse"
-        Me.txtParse.Size = New System.Drawing.Size(767, 110)
-        Me.txtParse.TabIndex = 0
+        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ExitToolStripMenuItem.Text = "&Exit"
+        '
+        'LoginToolStripMenuItem
+        '
+        Me.LoginToolStripMenuItem.Name = "LoginToolStripMenuItem"
+        Me.LoginToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.LoginToolStripMenuItem.Text = "&Login"
+        '
+        'ReportsToolStripMenuItem
+        '
+        Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
+        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(59, 20)
+        Me.ReportsToolStripMenuItem.Text = "&Reports"
         '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(925, 440)
-        Me.Controls.Add(Me.btnOk)
-        Me.Controls.Add(Me.lvSMS)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.ClientSize = New System.Drawing.Size(1305, 606)
+        Me.Controls.Add(Me.SplitContainer1)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmMain"
         Me.Text = "Main"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        Me.SplitContainer1.Panel1.ResumeLayout(False)
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainer1.ResumeLayout(False)
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents lvSMS As System.Windows.Forms.ListView
-    Friend WithEvents ColumnHeader1 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ColumnHeader2 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ColumnHeader3 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents Timer1 As System.Windows.Forms.Timer
-    Friend WithEvents btnOk As System.Windows.Forms.Button
-    Friend WithEvents txtParse As System.Windows.Forms.TextBox
+    Friend WithEvents SplitContainer1 As System.Windows.Forms.SplitContainer
+    Friend WithEvents btnTextMessage As System.Windows.Forms.Button
+    Friend WithEvents btnTextPromo As System.Windows.Forms.Button
+    Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
+    Friend WithEvents FileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ExitToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents LoginToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ReportsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

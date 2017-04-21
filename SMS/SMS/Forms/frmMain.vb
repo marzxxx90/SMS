@@ -1,64 +1,71 @@
-﻿Imports System.Text.RegularExpressions
-Imports System.Text
-
-Public Class frmMain
-    Private SMSHash As New Hashtable
-    Private pattern As String = "\[.*?\]"
-    Private strParse As String, strTrim As String
-    Private mc As System.Text.RegularExpressions.MatchCollection
-
-    Private Function Parser(ByVal StrText As String) As Hashtable
-        Dim regx As New System.Text.RegularExpressions.Regex(pattern)
-        If Regex.IsMatch(StrText, pattern) Then
-            mc = regx.Matches(StrText) 'Check kong pila ang bracket
-            For index As Integer = 0 To mc.Count - 1 ' Count sa Bracket
-                'Nagkuha ug Text Fields
-                strParse = mc(index).Value.Substring(0, mc(index).Value.IndexOf(":")).Trim({"["c})
-                Console.WriteLine("Fields " & strParse)
-
-                'Nagkuha ug Fields Information
-                strTrim = mc(index).Value.Substring(mc(index).Value.IndexOf(":") + 1).Trim({"]"c}).Trim({" "c})
-                Console.WriteLine("Value " & strTrim)
-
-                If Not isValidKey(strParse) Then Exit For
-
-                SMSHash.Add(strParse, strTrim)
-            Next
-        End If
-
-        'If SMSHash.Count = 0 Then Exit Sub
-
-        'Dim mysql As String = "Select * from SmsRegister"
-        'Dim ds As DataSet = LoadSQL(mysql, "SmsRegister")
-        'Dim dsNewRow As DataRow
-        'dsNewRow = ds.Tables("SmsRegister").NewRow
-        'With dsNewRow
-        '    .Item("Fname") = SMSHash("FNAME")
-        '    .Item("Lname") = SMSHash("LNAME")
-        '    .Item("Mname") = SMSHash("MNAME")
-        '    .Item("SMSNumber") = SMSHash("NUMBER")
-        'End With
-        'ds.Tables("SmsRegister").Rows.Add(dsNewRow)
-        'SaveEntry(ds)
-
-        'MsgBox("Success")
-        'SMSHash.Clear()
-        Return SMSHash
-    End Function
+﻿Public Class frmMain
 
 
-    Private Function isValidKey(ByVal Keys As String) As Boolean
-        Dim KeysCollection() As String = {"FNAME", "MNAME", "LNAME", "NUMBER", "REG_KEY"}
+    Friend Sub NotYetLogin(Optional ByVal st As Boolean = True)
+   
+    End Sub
 
-        If KeysCollection.Contains(Keys) Then Return True
-
-        Return False
-    End Function
-
-    Private Sub btnOk_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOk.Click
-        Parser(txtParse.Text)
-        For Each DE As DictionaryEntry In SMSHash
-            Console.WriteLine("Key " & DE.Key & " Value " & DE.Value)
+    Private Sub btnTextPromo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTextPromo.Click
+        Dim formNames As New List(Of String)
+        For Each Form In My.Application.OpenForms
+            If Form.Name <> "frmMain" Or Not Form.name <> "frmTextPromo" Then
+                formNames.Add(Form.Name)
+            End If
         Next
+
+        For Each currentFormName As String In formNames
+            Application.OpenForms(currentFormName).Close()
+        Next
+
+        frmTextPromo.TopLevel = False
+        SplitContainer1.Panel2.Controls.Add(frmTextPromo)
+        frmTextPromo.Show()
+    End Sub
+
+    Private Sub btnTextMessage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTextMessage.Click
+        Dim formNames As New List(Of String)
+        For Each Form In My.Application.OpenForms
+            If Form.Name <> "frmMain" Or Not Form.name <> "frmTextMessages" Then
+                formNames.Add(Form.Name)
+            End If
+        Next
+
+        For Each currentFormName As String In formNames
+            Application.OpenForms(currentFormName).Close()
+        Next
+
+        frmTextMessages.TopLevel = False
+        SplitContainer1.Panel2.Controls.Add(frmTextMessages)
+        frmTextMessages.Show()
+    End Sub
+
+    Private Sub ExitToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ExitToolStripMenuItem.Click
+        End
+    End Sub
+
+    Private Sub LoginToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LoginToolStripMenuItem.Click
+        If LoginToolStripMenuItem.Text = "&Login" Then
+            frmLogin.Show()
+        Else
+            Dim ans As DialogResult = MsgBox("Do you want to LOGOUT?", MsgBoxStyle.YesNo + MsgBoxStyle.DefaultButton2 + MsgBoxStyle.Information, "Logout")
+            If ans = Windows.Forms.DialogResult.No Then Exit Sub
+
+            Dim formNames As New List(Of String)
+            For Each Form In My.Application.OpenForms
+                If Form.Name <> "frmMain" Or Not Form.name <> "frmLogin" Then
+                    formNames.Add(Form.Name)
+                End If
+            Next
+            For Each currentFormName As String In formNames
+                Application.OpenForms(currentFormName).Close()
+            Next
+            MsgBox("Thank you!", MsgBoxStyle.Information)
+            NotYetLogin()
+            frmLogin.Show()
+        End If
+    End Sub
+
+    Private Sub frmMain_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
     End Sub
 End Class
