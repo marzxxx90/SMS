@@ -65,7 +65,20 @@
         End If
     End Sub
 
-    Private Sub frmMain_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub btnRegister_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRegister.Click
+        Dim formNames As New List(Of String)
+        For Each Form In My.Application.OpenForms
+            If Form.Name <> "frmMain" Or Not Form.name <> "frmRegister" Then
+                formNames.Add(Form.Name)
+            End If
+        Next
 
+        For Each currentFormName As String In formNames
+            Application.OpenForms(currentFormName).Close()
+        Next
+
+        frmRegister.TopLevel = False
+        SplitContainer1.Panel2.Controls.Add(frmRegister)
+        frmRegister.Show()
     End Sub
 End Class

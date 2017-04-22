@@ -117,11 +117,11 @@
     <Compile Include="Forms\frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmMain2.vb">
+    <Compile Include="Forms\frmRegister.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmMain2.Designer.vb">
-      <DependentUpon>frmMain2.vb</DependentUpon>
+    <Compile Include="Forms\frmRegister.Designer.vb">
+      <DependentUpon>frmRegister.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmTextMessages.Designer.vb">
@@ -159,8 +159,8 @@
     <EmbeddedResource Include="Forms\frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmMain2.resx">
-      <DependentUpon>frmMain2.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\frmRegister.resx">
+      <DependentUpon>frmRegister.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmTextMessages.resx">
       <DependentUpon>frmTextMessages.vb</DependentUpon>

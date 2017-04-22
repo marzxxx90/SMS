@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmMain2
+Partial Class frmRegister
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -25,13 +25,13 @@ Partial Class frmMain2
         Me.components = New System.ComponentModel.Container()
         Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"2/30/2017", "09123456789", "Hello"}, -1)
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtParse = New System.Windows.Forms.TextBox()
         Me.lvSMS = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.btnOk = New System.Windows.Forms.Button()
-        Me.txtParse = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -40,9 +40,17 @@ Partial Class frmMain2
         Me.GroupBox1.Controls.Add(Me.txtParse)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(779, 128)
+        Me.GroupBox1.Size = New System.Drawing.Size(718, 128)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
+        '
+        'txtParse
+        '
+        Me.txtParse.Location = New System.Drawing.Point(6, 12)
+        Me.txtParse.Multiline = True
+        Me.txtParse.Name = "txtParse"
+        Me.txtParse.Size = New System.Drawing.Size(706, 110)
+        Me.txtParse.TabIndex = 0
         '
         'lvSMS
         '
@@ -52,7 +60,7 @@ Partial Class frmMain2
         Me.lvSMS.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1})
         Me.lvSMS.Location = New System.Drawing.Point(12, 146)
         Me.lvSMS.Name = "lvSMS"
-        Me.lvSMS.Size = New System.Drawing.Size(779, 222)
+        Me.lvSMS.Size = New System.Drawing.Size(799, 277)
         Me.lvSMS.TabIndex = 1
         Me.lvSMS.UseCompatibleStateImageBehavior = False
         Me.lvSMS.View = System.Windows.Forms.View.Details
@@ -78,30 +86,23 @@ Partial Class frmMain2
         '
         'btnOk
         '
-        Me.btnOk.Location = New System.Drawing.Point(811, 22)
+        Me.btnOk.Location = New System.Drawing.Point(736, 24)
         Me.btnOk.Name = "btnOk"
         Me.btnOk.Size = New System.Drawing.Size(75, 23)
         Me.btnOk.TabIndex = 2
         Me.btnOk.Text = "OK"
         Me.btnOk.UseVisualStyleBackColor = True
         '
-        'txtParse
-        '
-        Me.txtParse.Location = New System.Drawing.Point(6, 12)
-        Me.txtParse.Multiline = True
-        Me.txtParse.Name = "txtParse"
-        Me.txtParse.Size = New System.Drawing.Size(767, 110)
-        Me.txtParse.TabIndex = 0
-        '
-        'frmMain
+        'frmRegister
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(925, 440)
+        Me.ClientSize = New System.Drawing.Size(823, 435)
         Me.Controls.Add(Me.btnOk)
         Me.Controls.Add(Me.lvSMS)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Name = "frmMain"
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Name = "frmRegister"
         Me.Text = "Main"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

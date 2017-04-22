@@ -1,7 +1,7 @@
 ﻿Imports System.Text.RegularExpressions
 Imports System.Text
 
-Public Class frmMain2
+Public Class frmRegister
     Private SMSHash As New Hashtable
     Private pattern As String = "\[.*?\]"
     Private strParse As String, strTrim As String

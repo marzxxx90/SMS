@@ -23,6 +23,7 @@ Partial Class frmMain
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.btnRegister = New System.Windows.Forms.Button()
         Me.btnTextPromo = New System.Windows.Forms.Button()
         Me.btnTextMessage = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
@@ -46,6 +47,7 @@ Partial Class frmMain
         'SplitContainer1.Panel1
         '
         Me.SplitContainer1.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.SplitContainer1.Panel1.Controls.Add(Me.btnRegister)
         Me.SplitContainer1.Panel1.Controls.Add(Me.btnTextPromo)
         Me.SplitContainer1.Panel1.Controls.Add(Me.btnTextMessage)
         '
@@ -56,6 +58,18 @@ Partial Class frmMain
         Me.SplitContainer1.Size = New System.Drawing.Size(1305, 582)
         Me.SplitContainer1.SplitterDistance = 229
         Me.SplitContainer1.TabIndex = 0
+        '
+        'btnRegister
+        '
+        Me.btnRegister.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRegister.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRegister.Location = New System.Drawing.Point(14, 178)
+        Me.btnRegister.Name = "btnRegister"
+        Me.btnRegister.Size = New System.Drawing.Size(212, 78)
+        Me.btnRegister.TabIndex = 2
+        Me.btnRegister.Text = "View Register"
+        Me.btnRegister.UseVisualStyleBackColor = False
         '
         'btnTextPromo
         '
@@ -100,13 +114,13 @@ Partial Class frmMain
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(104, 22)
         Me.ExitToolStripMenuItem.Text = "&Exit"
         '
         'LoginToolStripMenuItem
         '
         Me.LoginToolStripMenuItem.Name = "LoginToolStripMenuItem"
-        Me.LoginToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.LoginToolStripMenuItem.Size = New System.Drawing.Size(104, 22)
         Me.LoginToolStripMenuItem.Text = "&Login"
         '
         'ReportsToolStripMenuItem
@@ -143,5 +157,6 @@ Partial Class frmMain
     Friend WithEvents ExitToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents LoginToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ReportsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents btnRegister As System.Windows.Forms.Button
 
 End Class
