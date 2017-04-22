@@ -103,4 +103,12 @@ Public Class frmTextPromo
         'Next
         MsgBox("Successfully saved.")
     End Sub
+
+    Private Sub TabPage3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabPage3.Click
+
+    End Sub
+
+    Private Sub TabPage4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabPage4.Click
+
+    End Sub
 End Class

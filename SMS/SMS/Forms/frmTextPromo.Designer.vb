@@ -48,11 +48,19 @@ Partial Class frmTextPromo
         Me.txtKeywords = New SMS.watermark()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.btnsave = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TabControl2 = New System.Windows.Forms.TabControl()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.TabPage5 = New System.Windows.Forms.TabPage()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        Me.TabControl2.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
         Me.SuspendLayout()
         '
         'lblTitle
@@ -83,7 +91,7 @@ Partial Class frmTextPromo
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(695, 186)
+        Me.TabPage1.Size = New System.Drawing.Size(701, 227)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Question"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -106,7 +114,7 @@ Partial Class frmTextPromo
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(695, 186)
+        Me.TabPage2.Size = New System.Drawing.Size(688, 227)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Answer"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -148,10 +156,10 @@ Partial Class frmTextPromo
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(13, 322)
+        Me.TabControl1.Location = New System.Drawing.Point(6, 298)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(703, 212)
+        Me.TabControl1.Size = New System.Drawing.Size(709, 253)
         Me.TabControl1.TabIndex = 21
         '
         'chkHasDuration
@@ -192,7 +200,7 @@ Partial Class frmTextPromo
         'DateTimePicker2
         '
         Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.DateTimePicker2.Location = New System.Drawing.Point(263, 239)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(278, 238)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(147, 20)
         Me.DateTimePicker2.TabIndex = 20
@@ -211,6 +219,7 @@ Partial Class frmTextPromo
         '
         'DateTimePicker1
         '
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time
         Me.DateTimePicker1.Location = New System.Drawing.Point(107, 239)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(135, 20)
@@ -218,6 +227,8 @@ Partial Class frmTextPromo
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.Label2)
+        Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Controls.Add(Me.chkHasDuration)
         Me.GroupBox2.Controls.Add(Me.tbOnlyReg)
         Me.GroupBox2.Controls.Add(Me.RBall)
@@ -232,9 +243,9 @@ Partial Class frmTextPromo
         Me.GroupBox2.Controls.Add(Me.txtPromoName)
         Me.GroupBox2.Controls.Add(Me.txtKeywords)
         Me.GroupBox2.Controls.Add(Me.Label7)
-        Me.GroupBox2.Location = New System.Drawing.Point(15, 40)
+        Me.GroupBox2.Location = New System.Drawing.Point(6, 16)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(467, 276)
+        Me.GroupBox2.Size = New System.Drawing.Size(567, 276)
         Me.GroupBox2.TabIndex = 20
         Me.GroupBox2.TabStop = False
         '
@@ -254,7 +265,7 @@ Partial Class frmTextPromo
         Me.txtPromoKey.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPromoKey.Location = New System.Drawing.Point(107, 43)
         Me.txtPromoKey.Name = "txtPromoKey"
-        Me.txtPromoKey.Size = New System.Drawing.Size(355, 22)
+        Me.txtPromoKey.Size = New System.Drawing.Size(454, 22)
         Me.txtPromoKey.TabIndex = 15
         Me.txtPromoKey.WatermarkColor = System.Drawing.Color.Gray
         Me.txtPromoKey.WatermarkText = "Promo Key"
@@ -298,7 +309,7 @@ Partial Class frmTextPromo
         Me.txtPromoName.Location = New System.Drawing.Point(107, 73)
         Me.txtPromoName.Multiline = True
         Me.txtPromoName.Name = "txtPromoName"
-        Me.txtPromoName.Size = New System.Drawing.Size(355, 58)
+        Me.txtPromoName.Size = New System.Drawing.Size(454, 58)
         Me.txtPromoName.TabIndex = 11
         Me.txtPromoName.WatermarkColor = System.Drawing.Color.Gray
         Me.txtPromoName.WatermarkText = "Promo Name"
@@ -308,7 +319,7 @@ Partial Class frmTextPromo
         Me.txtKeywords.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtKeywords.Location = New System.Drawing.Point(108, 139)
         Me.txtKeywords.Name = "txtKeywords"
-        Me.txtKeywords.Size = New System.Drawing.Size(354, 22)
+        Me.txtKeywords.Size = New System.Drawing.Size(453, 22)
         Me.txtKeywords.TabIndex = 13
         Me.txtKeywords.WatermarkColor = System.Drawing.Color.Gray
         Me.txtKeywords.WatermarkText = "Enter your promo keywords for Ex [PromoName:Answer key]"
@@ -327,22 +338,86 @@ Partial Class frmTextPromo
         'btnsave
         '
         Me.btnsave.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnsave.Location = New System.Drawing.Point(500, 272)
+        Me.btnsave.Location = New System.Drawing.Point(595, 248)
         Me.btnsave.Name = "btnsave"
         Me.btnsave.Size = New System.Drawing.Size(120, 44)
         Me.btnsave.TabIndex = 23
         Me.btnsave.Text = "&Save Promo"
         Me.btnsave.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label1.Location = New System.Drawing.Point(11, 243)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(84, 14)
+        Me.Label1.TabIndex = 24
+        Me.Label1.Text = "Time Duration"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label2.Location = New System.Drawing.Point(247, 241)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(19, 14)
+        Me.Label2.TabIndex = 25
+        Me.Label2.Text = "to"
+        '
+        'TabControl2
+        '
+        Me.TabControl2.Controls.Add(Me.TabPage3)
+        Me.TabControl2.Controls.Add(Me.TabPage4)
+        Me.TabControl2.Controls.Add(Me.TabPage5)
+        Me.TabControl2.Location = New System.Drawing.Point(9, 29)
+        Me.TabControl2.Name = "TabControl2"
+        Me.TabControl2.SelectedIndex = 0
+        Me.TabControl2.Size = New System.Drawing.Size(1090, 592)
+        Me.TabControl2.TabIndex = 24
+        '
+        'TabPage3
+        '
+        Me.TabPage3.Controls.Add(Me.GroupBox2)
+        Me.TabPage3.Controls.Add(Me.btnsave)
+        Me.TabPage3.Controls.Add(Me.TabControl1)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage3.Size = New System.Drawing.Size(1082, 566)
+        Me.TabPage3.TabIndex = 0
+        Me.TabPage3.Text = "Add Text Promo"
+        Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'TabPage4
+        '
+        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage4.Size = New System.Drawing.Size(1082, 566)
+        Me.TabPage4.TabIndex = 1
+        Me.TabPage4.Text = "Text Polling"
+        Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'TabPage5
+        '
+        Me.TabPage5.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage5.Name = "TabPage5"
+        Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage5.Size = New System.Drawing.Size(1082, 566)
+        Me.TabPage5.TabIndex = 2
+        Me.TabPage5.Text = "Text Promo Transaction"
+        Me.TabPage5.UseVisualStyleBackColor = True
+        '
         'frmTextPromo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(731, 543)
-        Me.Controls.Add(Me.btnsave)
-        Me.Controls.Add(Me.TabControl1)
-        Me.Controls.Add(Me.GroupBox2)
+        Me.ClientSize = New System.Drawing.Size(1272, 658)
+        Me.Controls.Add(Me.TabControl2)
         Me.Controls.Add(Me.lblTitle)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmTextPromo"
@@ -356,6 +431,8 @@ Partial Class frmTextPromo
         Me.TabControl1.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.TabControl2.ResumeLayout(False)
+        Me.TabPage3.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -386,4 +463,10 @@ Partial Class frmTextPromo
     Friend WithEvents txtKeywords As SMS.watermark
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents btnsave As System.Windows.Forms.Button
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents TabControl2 As System.Windows.Forms.TabControl
+    Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
+    Friend WithEvents TabPage4 As System.Windows.Forms.TabPage
+    Friend WithEvents TabPage5 As System.Windows.Forms.TabPage
 End Class

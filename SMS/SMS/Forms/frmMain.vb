@@ -6,16 +6,7 @@
     End Sub
 
     Private Sub btnTextPromo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTextPromo.Click
-        Dim formNames As New List(Of String)
-        For Each Form In My.Application.OpenForms
-            If Form.Name <> "frmMain" Or Not Form.name <> "frmTextPromo" Then
-                formNames.Add(Form.Name)
-            End If
-        Next
-
-        For Each currentFormName As String In formNames
-            Application.OpenForms(currentFormName).Close()
-        Next
+        CLoseForms("frmTextPromo")
 
         frmTextPromo.TopLevel = False
         SplitContainer1.Panel2.Controls.Add(frmTextPromo)
@@ -23,16 +14,8 @@
     End Sub
 
     Private Sub btnTextMessage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTextMessage.Click
-        Dim formNames As New List(Of String)
-        For Each Form In My.Application.OpenForms
-            If Form.Name <> "frmMain" Or Not Form.name <> "frmTextMessages" Then
-                formNames.Add(Form.Name)
-            End If
-        Next
-
-        For Each currentFormName As String In formNames
-            Application.OpenForms(currentFormName).Close()
-        Next
+    
+        CLoseForms("frmTextMessages")
 
         frmTextMessages.TopLevel = False
         SplitContainer1.Panel2.Controls.Add(frmTextMessages)
@@ -49,16 +32,8 @@
         Else
             Dim ans As DialogResult = MsgBox("Do you want to LOGOUT?", MsgBoxStyle.YesNo + MsgBoxStyle.DefaultButton2 + MsgBoxStyle.Information, "Logout")
             If ans = Windows.Forms.DialogResult.No Then Exit Sub
-
-            Dim formNames As New List(Of String)
-            For Each Form In My.Application.OpenForms
-                If Form.Name <> "frmMain" Or Not Form.name <> "frmLogin" Then
-                    formNames.Add(Form.Name)
-                End If
-            Next
-            For Each currentFormName As String In formNames
-                Application.OpenForms(currentFormName).Close()
-            Next
+            CLoseForms("frmLogin")
+          
             MsgBox("Thank you!", MsgBoxStyle.Information)
             NotYetLogin()
             frmLogin.Show()
@@ -66,17 +41,7 @@
     End Sub
 
     Private Sub btnRegister_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRegister.Click
-        Dim formNames As New List(Of String)
-        For Each Form In My.Application.OpenForms
-            If Form.Name <> "frmMain" Or Not Form.name <> "frmRegister" Then
-                formNames.Add(Form.Name)
-            End If
-        Next
-
-        For Each currentFormName As String In formNames
-            Application.OpenForms(currentFormName).Close()
-        Next
-
+        CLoseForms("frmRegister")
         frmRegister.TopLevel = False
         SplitContainer1.Panel2.Controls.Add(frmRegister)
         frmRegister.Show()

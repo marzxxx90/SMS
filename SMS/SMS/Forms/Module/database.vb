@@ -235,5 +235,16 @@ Friend Module database
         Return ret
     End Function
    
+    Friend Sub CLoseForms(ByVal frm As String)
+        Dim formNames As New List(Of String)
+        For Each Form In My.Application.OpenForms
+            If Form.Name <> "frmMain" Or Not Form.name <> frm Then
+                formNames.Add(Form.Name)
+            End If
+        Next
 
+        For Each currentFormName As String In formNames
+            Application.OpenForms(currentFormName).Close()
+        Next
+    End Sub
 End Module
