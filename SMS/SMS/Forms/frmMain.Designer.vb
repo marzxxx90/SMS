@@ -47,9 +47,9 @@ Partial Class frmMain
         'SplitContainer1.Panel1
         '
         Me.SplitContainer1.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.SplitContainer1.Panel1.Controls.Add(Me.btnRegister)
         Me.SplitContainer1.Panel1.Controls.Add(Me.btnTextPromo)
         Me.SplitContainer1.Panel1.Controls.Add(Me.btnTextMessage)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.btnRegister)
         '
         'SplitContainer1.Panel2
         '
