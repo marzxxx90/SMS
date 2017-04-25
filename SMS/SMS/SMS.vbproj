@@ -82,6 +82,7 @@
     <Reference Include="DevComponents.TreeGX">
       <HintPath>DLL\DevComponents.TreeGX.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data, Version=6.1.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -135,6 +136,11 @@
     </Compile>
     <Compile Include="Forms\frmTextPromo.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Module\database.vb" />
+    <Compile Include="Forms\Module\mod_system.vb" />
+    <Compile Include="Forms\watermark.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
